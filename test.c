@@ -26,6 +26,7 @@ int* points_segments_naive(int ** segments, int * points, int num_points, int ro
             }
         }
     }
+    printf("Naive algorithm: ");
     print_array(arr,num_points);
     return arr;
 }
@@ -109,8 +110,8 @@ int* points_segments_quicksort(int ** segments, int * points, int num_points, in
         }
     }
     free(arr_sorted);
+    printf("quicksort algorithm: ");
     print_array(arr,num_points);
-
     return arr;
 }
 
@@ -165,17 +166,14 @@ int main() {
             for (int i = 0; i < p; i++){
                 if(result1[i] == result2[i]){
                 } else {
-
                     printf("Wrong. The answer is ");
                     print_array(result1,p);
-                    print_array(result2,p);
-
                     correct = 0;
                     break;
                 }
             }
             if (correct){
-                printf("Correct");
+                printf("Correct.\n");
             }
             
 			//TODO: implement - compare these outputs from 2 algorithms
